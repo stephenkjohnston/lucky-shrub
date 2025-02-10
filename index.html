@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <figure>
+      <img src="src/assets/images/Logo.png" alt="Lucky Shrub" />
+    </figure>
+    <nav>
+      <ul>
+        <li><a href="#" class="active" title="Home">Home</a></li>
+        <li><a href="#" title="Services">Services</a></li>
+        <li><a href="#" title="Contact">Contact</a></li>
+        <li><a href="#" title="About">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="site-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <h2 id="hero-heading">Ready to Elevate Your Outdoor Space?</h2>
+      <p class="hero-description">First-time clients save 20% on your first month of landscaping &mdash; create your dream oasis today!</p>
+      <a href="#" class="hero-cta" aria-label="Start your project">Start My Project</a>
+      <figure>
+        <img src="src/assets/images/HeroImage.png"
+          alt="Luxurious garden with vibrant plants and elegant landscaping by Lucky Shrub" loading="lazy">
+        <figcaption class="visually-hidden">Premium Garden Design & Landscaping Services by Lucky Shrub</figcaption>
+      </figure>
+    </section>
+    <section class="services" aria-labelledby="services-heading">
+      <h2 id="services-heading" class="visually-hidden">Our Services</h2>
+      <article class="service" aria-labelledby="garden-design">
+        <h3 id="garden-design">Garden Design</h3>
+        <figure>
+          <img src="src/assets/images/GardenDesignService.png" alt="Sketch of a garden layout" loading="lazy">
+          <figcaption class="visually-hidden">Garden Design Service</figcaption>
+        </figure>
+        <p>Bring your vision to life with custom garden designs tailored to your space and style.</p>
+        <a href="#" class="button" aria-label="Start your design journey">Start Your Design Journey</a>
+      </article>
+
+      <article class="service" aria-labelledby="landscaping">
+        <h3 id="landscaping">Landscaping</h3>
+        <figure>
+          <img src="src/assets/images/LandscapingService.png" alt="Before and after of a transformed yard"
+            loading="lazy">
+          <figcaption class="visually-hidden">Landscaping Service</figcaption>
+        </figure>
+        <p>From installation to maintenance, we'll transform your outdoor space into a lush paradise.</p>
+        <a href="#" class="button" aria-label="Begin your transformation">Begin Your Transformation</a>
+      </article>
+
+      <article class="service" aria-labelledby="plant-shop">
+        <h3 id="plant-shop">Shop Premium Plants</h3>
+        <figure>
+          <img src="src/assets/images/PlantService.png" alt="Various potted plants on display" loading="lazy">
+          <figcaption class="visually-hidden">Selection of Premium Plants</figcaption>
+        </figure>
+        <p>Explore our handpicked collection of plants, perfect for enhancing your garden or landscape. From vibrant
+          blooms
+          to lush greenery, find the ideal plants to bring your vision to life.</p>
+        <a href="#" class="button" aria-label="Browse our plant selection">Browse Our Plants</a>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <figure class="logo">
+      <img src="src/assets/images/Logo.png" alt="Lucky Shrub" />
+    </figure>
+    <p id="copyright">&copy; Lucky Shrub <time id="year"></time></p>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+// Variables
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-cyprus-950: hsl(177, 97%, 13%);
+
+    --ff-primary: "League Spartan", serif;
+
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --fs-xl: clamp(1.5rem, 5vw, 3rem);
+    --fs-lg: clamp(1.25rem, 4vw, 1.625rem);
+    --fs-md: clamp(1rem, 3vw, 1.5rem);
+    --fs-base: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+// Base Styles
+body {
+    padding: 1.25rem;
+    display: grid;
+    place-content: center;
+    grid-template-areas:
+        "site-header"
+        "site-content"
+        "site-footer";
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-base);
+    font-optical-sizing: auto;
+
+    @media (max-width: 400px) {
+        padding: 0.5rem;
+        background: pink;
+    }
+}
+
+// Reset Figure Margin
+figure {
+    margin: 0;
+}
+
+// Site Header
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: site-header;
+
+    nav {
+        ul {
+            margin: 1.5rem 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 1rem; // Add gap between list items
+        }
+
+        li {
+            a {
+                padding: 0.625rem 0.9375rem;
+                color: var(--clr-cyprus-950);
+                text-decoration: none;
+                font-size: var(--fs-md);
+
+                &.active {
+                    background: var(--clr-cyprus-950);
+                    color: var(--clr-white);
+                    border-radius: 6.25rem;
+                }
+
+                &:hover {
+                    background: var(--clr-cyprus-950);
+                    color: var(--clr-white);
+                    border-radius: 6.25rem;
+                }
+            }
+        }
+    }
+}
+
+// Site Content
+.site-content {
+    display: flex;
+    flex-direction: column;
+    grid-area: site-content;
+    gap: 1.25rem;
+}
+
+// Site Footer
+.site-footer {
+    grid-area: site-footer;
+}
+
+// Hero Section
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--clr-cyprus-950);
+    border-radius: 20px;
+    padding: 2.5rem;
+    color: var(--clr-white);
+    gap: 1.25rem;
+
+    @media (max-width: 400px) {
+        padding: 1rem;
+    }
+
+    figure {
+        width: 100%;
+
+        img {
+            width: 100%;
+            border-radius: 0.625rem;
+
+            @media (max-width: 400px) {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &-description {
+        margin: 0;
+        font-size: var(--fs-lg);
+    }
+
+    &-cta {
+        display: inline-flex;
+        place-content: center;
+        width: fit-content;
+        padding: 0.625rem 1.25rem;
+        border-radius: 100px;
+        background-color: var(--clr-white);
+        font-size: var(--fs-md);
+        color: var(--clr-cyprus-950);
+        font-weight: var(--fw-700);
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s; // Smooth transition
+
+        &:hover {
+            background: var(--clr-cyprus-950);
+            color: var(--clr-white);
+            outline: 2px solid var(--clr-white); // Add outline on hover
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 1.25rem;
+    }
+}
+
+#hero-heading {
+    margin: 0;
+    font-size: var(--fs-xl);
+}
+
+// Services Section
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+
+    @media (max-width: 400px) {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--clr-white);
+        padding: 1.25rem;
+        border-radius: 0.625rem;
+        border: 4px solid var(--clr-cyprus-950);
+        height: 100%; // Ensure the service card takes full height of its container
+
+        @media (max-width: 400px) {
+            padding: 0.75rem;
+        }
+
+        h3 {
+            margin-block: 0 1rem; // Add spacing below the heading
+            font-size: var(--fs-lg);
+        }
+
+        figure {
+            margin: 0 0 1rem 0; // Add spacing below the figure
+            width: 100%;
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+
+                @media (max-width: 400px) {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        p {
+            margin: 0 0 1rem 0; // Add spacing below the paragraph
+            flex-grow: 1; // Allow the paragraph to grow and push the button to the bottom
+        }
+
+        .button {
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.625rem 1.25rem;
+            background: var(--clr-cyprus-950);
+            color: var(--clr-white);
+            text-decoration: none;
+            border-radius: .375rem;
+            font-size: var(--fs-md);
+            font-weight: var(--fw-700);
+            transition: background 0.3s, color 0.3s;
+
+            &:hover {
+                background: var(--clr-white);
+                color: var(--clr-cyprus-950);
+                outline: 2px solid var(--clr-cyprus-950);
+            }
+        }
+    }
+}
+
+.site-footer {
+    margin-block-start: 1.5rem;
+    display: flex;
+
+    .logo {
+        flex-grow: 1;
+    }
+}
